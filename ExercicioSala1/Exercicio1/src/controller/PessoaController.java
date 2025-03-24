@@ -50,9 +50,16 @@ public class PessoaController {
 			
 			lista.add(pessoa);
 		}
+		double imc = pessoa.calcularImc();
+
 		System.out.println();
 		System.out.println("Lista de Pessoas");
 		pessoa.listarPessoas(lista);
+		System.out.println();
+		System.out.printf("Imc: %2.f", imc);
+		System.out.println();
+		System.out.printf("Classificaçao: %s", pessoa.classificarImc(imc));
+
 		
 		sc.close();
 	}

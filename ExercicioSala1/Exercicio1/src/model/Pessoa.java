@@ -67,6 +67,26 @@ public class Pessoa {
 			System.out.print(x);
 		}
 	}
+	
+	public double calcularImc() {
+		return (peso / (altura * altura));
+	}
+	
+	public String classificarImc(double imc) {
+		if (imc < 18.5) {
+			return "Magreza";
+		} else if (imc < 24.9) {
+			return "Normal";
+		} else if (imc < 29.9) {
+			return "Sobrepeso";
+		} else if (imc < 34.9) {
+			return "Obesidade grau I";
+		} else if (imc < 39.9) {
+			return "Obesidade grau II";
+		} else {
+			return "Obesidade grau III";
+		} 
+	}
 
 	@Override
 	public String toString() {
